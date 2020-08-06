@@ -1,5 +1,4 @@
 {
-  "name": "@fruit/fruit",
   "private": true,
   "workspaces": [
     "packages/*"

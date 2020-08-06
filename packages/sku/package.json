@@ -1,9 +1,12 @@
 {
-  "name": "@fruit/data-structures",
+  "name": "@fruit/sku",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fruit/toolbox": "^1.0.0"
+  }
 }

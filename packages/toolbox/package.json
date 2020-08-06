@@ -1,8 +1,10 @@
 {
-  "name": "toolbox",
+  "name": "@fruit/toolbox",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "module": "dist/toolbox.esm.js",
+  "types": "dist/toolbox.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC"
