@@ -1,4 +1,4 @@
-import { combination } from '../src'
+import { combination } from '../../src'
 
 describe('test combination ', () => {
   const rawData = [1, 2, 3]

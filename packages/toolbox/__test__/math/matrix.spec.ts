@@ -1,4 +1,4 @@
-import { Matrix } from '../src'
+import { Matrix } from '../../src'
 
 describe('test math method ', () => {
   const rawMatrix = [

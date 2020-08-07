@@ -13,12 +13,10 @@ import {
   isArray,
   isDate,
   isRegExp,
-} from '../src'
+} from '../../src'
 
 describe('test types judge', () => {
-  function a() {
-    this.b = 1
-  }
+  const a = (c: number) => c
   class d {}
   test('is basic type ', () => {
     expect(isNumber(1)).toBeTruthy()
@@ -48,7 +46,6 @@ describe('test types judge', () => {
     expect(isObjectLike({})).toBeTruthy()
     expect(isObjectLike([])).toBeTruthy()
     expect(isObjectLike(new Date())).toBeTruthy()
-    expect(isObjectLike(new a())).toBeTruthy()
     expect(isObjectLike(/abc/)).toBeTruthy()
 
     // toString 为 [object object]
@@ -59,7 +56,6 @@ describe('test types judge', () => {
 
     expect(isObject({})).toBeTruthy()
     expect(isObject(Object.create(null))).toBeTruthy()
-    expect(isObject(new a())).toBeTruthy()
 
     // 纯对象 {} Object.create(null)
     expect(isPureObject(Object.create(null))).toBeTruthy()
@@ -69,7 +65,6 @@ describe('test types judge', () => {
     expect(isPureObject([])).toBeFalsy()
     expect(isPureObject(new Date())).toBeFalsy()
     expect(isPureObject(/abc+/)).toBeFalsy()
-    expect(isPureObject(new a())).toBeFalsy()
   })
   test('is quote type ', () => {
     expect(isArray([])).toBeTruthy()
