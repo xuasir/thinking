@@ -6,7 +6,7 @@ type basicType =
   | 'function'
   | 'undefined'
 
-function isBasicType(type: basicType): (value: unknown) => boolean {
+function isBasicType(type: basicType): <T>(value: T) => boolean {
   return (value) => {
     const lowercaseType = type.toLowerCase()
     return typeof value === lowercaseType
@@ -30,7 +30,7 @@ export const isFunction = isBasicType('function')
 
 export const isUndefined = isBasicType('undefined')
 
-export const isUndefinedOrNull = (value: unknown): boolean => value == null
+export const isUndefinedOrNull = <T>(value: T): boolean => value == null
 
 export const isArray = isTypeByToString('array')
 
@@ -38,17 +38,17 @@ export const isDate = isTypeByToString('date')
 
 export const isRegExp = isTypeByToString('regexp')
 
-export const isNull = (value: unknown): boolean => value === null
+export const isNull = <T>(value: T): boolean => value === null
 
 // not null and typeof value is object
-export const isObjectLike = (value: unknown): boolean =>
+export const isObjectLike = <T>(value: T): boolean =>
   typeof value === 'object' && !isNull(value)
 
 // {} Object.create(null) new A()
 export const isObject = isTypeByToString('object')
 
 // {} Object.create(null)
-export const isPureObject = (value: unknown): boolean => {
+export const isPureObject = <T>(value: T): boolean => {
   if (!isObject(value)) return false
 
   if (Object.getPrototypeOf(value) === null) return true

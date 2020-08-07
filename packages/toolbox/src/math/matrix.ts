@@ -1,5 +1,5 @@
 class Matrix<T> {
-  private _m: T[][] = null
+  private _m: T[][]
 
   constructor(m: T[][]) {
     this._m = m
