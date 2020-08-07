@@ -1,0 +1,28 @@
+{
+  "include": [
+    "packages/*/src",
+    "packages/*/__test__"
+  ],
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "esnext",
+    "module": "esnext",
+    "sourceMap": true,
+    "rootDir": "./",
+    "removeComments": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noUnusedLocals": true,
+    /* Report errors on unused locals. */
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@fruit/*": ["packages/*/src"]
+    },
+    "esModuleInterop": true,
+    /* Advanced Options */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+  }
+}
