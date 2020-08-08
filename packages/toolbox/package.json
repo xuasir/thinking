@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "module": "dist/toolbox.esm.js",
+  "module": "dist/toolbox.esm.prod.js",
   "types": "dist/toolbox.d.ts",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "buildOptions": {
+    "prod": true,
+    "name": "FruitToolbox",
+    "formats": [
+      "esm",
+      "cjs",
+      "umd"
+    ]
+  }
 }
