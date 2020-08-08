@@ -1,11 +1,24 @@
 {
   "name": "@fruit/sku",
   "version": "1.0.0",
-  "description": "",
+  "description": "a sku helper",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "sku",
+    "spu",
+    "combine"
+  ],
+  "author": "xuguo",
   "license": "ISC",
+  "buildOptions": {
+    "prod": true,
+    "name": "FruitSku",
+    "format": [
+      "esm",
+      "cjs",
+      "umd"
+    ]
+  },
   "dependencies": {
     "@fruit/toolbox": "^1.0.0"
   }
