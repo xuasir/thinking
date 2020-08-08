@@ -31,5 +31,15 @@ module.exports = {
         'plugin:jest/recommended',
       ],
     },
+    {
+      files: ['./scripts/*', 'rollup.*.js'],
+      env: {
+        node: true,
+      },
+      extends: ['eslint:recommended', 'prettier'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 0,
+      },
+    },
   ],
 }
