@@ -1,4 +1,4 @@
-import { SpecStatus } from './../helper/enum'
+import { SpecStatus } from '../helper/enum'
 import { currentSpuOps } from './spuOps'
 
 export class Spec<T> {
