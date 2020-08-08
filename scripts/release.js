@@ -129,11 +129,12 @@ async function workForPublish() {
     step(`committing changes...`)
     await run('git', ['add', '-A'])
     await run('git', [
-      '--no-verify',
+      'commit',
       '-m',
       `release: publish packages: ${Object.keys(pkgNameToNextVersionMap).join(
         ','
       )}`,
+      '--no-verify',
     ])
   } else {
     console.info(`nothing to commit...`)
