@@ -2,7 +2,12 @@
   "name": "@fruit/sku",
   "version": "1.0.0",
   "description": "a sku helper",
-  "main": "index.js",
+  "main": "dist/sku.cjs.js",
+  "module": "dist/sku.esm.js",
+  "types": "dist/sku.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "sku",
     "spu",
@@ -13,13 +18,13 @@
   "buildOptions": {
     "prod": true,
     "name": "FruitSku",
-    "format": [
+    "formats": [
       "esm",
       "cjs",
       "umd"
     ]
   },
   "dependencies": {
-    "@fruit/toolbox": "^1.0.0"
+    "@fruit/toolbox": "1.0.2"
   }
 }

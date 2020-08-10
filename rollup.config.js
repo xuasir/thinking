@@ -115,10 +115,11 @@ function createProdConfig(format, output) {
   const { terser } = require('rollup-plugin-terser')
   return createConfig(
     format,
-    {
-      file: output['file'].replace('.js', '.prod.js'),
-      format: output['format'],
-    },
+    // {
+    //   file: output['file'].replace('.js', '.prod.js'),
+    //   format: output['format'],
+    // },
+    output,
     [
       terser({
         module: format === 'esm',

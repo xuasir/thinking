@@ -1,12 +1,21 @@
 {
   "name": "@fruit/toolbox",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "module": "dist/toolbox.esm.prod.js",
+  "version": "1.0.2",
+  "description": "js utils function",
+  "main": "dist/toolbox.cjs.js",
+  "module": "dist/toolbox.esm.js",
   "types": "dist/toolbox.d.ts",
-  "keywords": [],
-  "author": "",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "js",
+    "utils",
+    "functional",
+    "math"
+  ],
+  "author": "xuguo",
   "license": "ISC",
   "buildOptions": {
     "prod": true,

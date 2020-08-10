@@ -1,3 +1,5 @@
+import { extend } from '@fruit/toolbox'
+
 export interface SpuOps {
   skuCodeJoiner: string
   specCodeJoiner: string
@@ -8,6 +10,7 @@ export interface SpuOps {
   getspecValueId(spec: any): number | string
   getSpecTitle(spec: any): string
   getspecValue(spec: any): string
+  [key: string]: unknown
 }
 
 export let currentSpuOps: SpuOps = {
@@ -37,5 +40,5 @@ export let currentSpuOps: SpuOps = {
 }
 
 export function setSpuOps(ops: SpuOps): void {
-  currentSpuOps = ops
+  currentSpuOps = extend(currentSpuOps, ops)
 }
