@@ -25,6 +25,6 @@
     ]
   },
   "dependencies": {
-    "@xuguo/toolbox": "1.0.2"
+    "@xuguo/toolbox": "^1.0.2"
   }
 }
