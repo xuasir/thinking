@@ -1,5 +1,5 @@
 {
-  "name": "@fruit/toolbox",
+  "name": "@xuguo/toolbox",
   "version": "1.0.2",
   "description": "js utils function",
   "main": "dist/toolbox.cjs.js",
@@ -19,7 +19,7 @@
   "license": "ISC",
   "buildOptions": {
     "prod": true,
-    "name": "FruitToolbox",
+    "name": "XToolbox",
     "formats": [
       "esm",
       "cjs",

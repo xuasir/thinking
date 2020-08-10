@@ -1,5 +1,5 @@
 {
-  "name": "@fruit/sku",
+  "name": "@xuguo/sku",
   "version": "1.0.0",
   "description": "a sku helper",
   "main": "dist/sku.cjs.js",
@@ -17,7 +17,7 @@
   "license": "ISC",
   "buildOptions": {
     "prod": true,
-    "name": "FruitSku",
+    "name": "XSku",
     "formats": [
       "esm",
       "cjs",
@@ -25,6 +25,6 @@
     ]
   },
   "dependencies": {
-    "@fruit/toolbox": "1.0.2"
+    "@xuguo/toolbox": "1.0.2"
   }
 }
