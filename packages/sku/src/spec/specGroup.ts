@@ -1,5 +1,5 @@
 import { SpecLine, SpecLineInstanceType } from './specLine'
-import { Matrix } from '@fruit/toolbox'
+import { Matrix } from '@xuguo/toolbox'
 import { currentSpuOps } from './spuOps'
 import { SpecInstanceType } from './spec'
 import { SpecStatus } from '../helper/enum'
@@ -76,7 +76,7 @@ export class SpecGroup<T, U> {
   }
 
   setSpecStatusByPosition(row: number, col: number, status: SpecStatus): void {
-    this.specLines[row].specs[col].status = status
+    this.specLines[row].specs[col].setStatus(status)
   }
 
   eachSkuIdJoinSpecsId(cb: (skuSpecsJoin: string) => any): void {

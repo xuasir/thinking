@@ -11,8 +11,12 @@ export class Spec<T> {
 
   get specJoinQue(): string {
     return this.specValueId
-      ? `${this.specId}${currentSpuOps.specCodeJoiner}${this.specValueId}`
+      ? `${this.specId}-${this.specValueId}`
       : `${this.specId}`
+  }
+
+  setStatus(status: SpecStatus): void {
+    this.status = status
   }
 
   constructor(spec: T, _row: number, _col: number) {
