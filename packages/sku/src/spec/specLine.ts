@@ -23,7 +23,9 @@ export class SpecLine<T> {
 
   private _specIsRepeact(spec: T): boolean {
     return this.specs.findIndex(
-      (curSpec) => curSpec.specId === currentSpuOps.getSpecId(spec)
+      (curSpec) =>
+        `${curSpec.specId}-${curSpec.specValueId}` ===
+        `${currentSpuOps.getSpecId(spec)}-${currentSpuOps.getspecValueId(spec)}`
     ) > -1
       ? true
       : false
