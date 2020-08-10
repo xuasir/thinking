@@ -1,15 +1,11 @@
 const semver = require('semver')
 const execa = require('execa')
 const chalk = require('chalk')
-const {
-  prompt
-} = require('enquirer')
+const { prompt } = require('enquirer')
 const path = require('path')
 const fs = require('fs')
 const args = require('minimist')(process.argv.slice(2))
-const {
-  targets: allPkgs
-} = require('./utils')
+const { targets: allPkgs } = require('./utils')
 
 const inlinePkgs = args._
 const waitForReleasePkgs = inlinePkgs.length > 0 ? inlinePkgs : allPkgs
@@ -57,9 +53,7 @@ async function ensureVersion(pkgName) {
     return
   }
   step(`ensure version for ${chalk.yellow(pkgName)}`)
-  const {
-    release
-  } = await prompt({
+  const { release } = await prompt({
     type: 'select',
     name: 'release',
     message: 'Select release type',
@@ -84,9 +78,7 @@ async function ensureVersion(pkgName) {
     throw new Error(`version: ${targetVersion} is invalid!`)
   }
 
-  const {
-    yes
-  } = await prompt({
+  const { yes } = await prompt({
     type: 'confirm',
     name: 'yes',
     message: `Releasing v${targetVersion}. Confirm?`,
@@ -130,9 +122,7 @@ async function workForPublish() {
   // generate changelog
   step(`generate changelog...`)
   await run('yarn', ['changelog'])
-  const {
-    stdout
-  } = await run('git', ['diff'], {
+  const { stdout } = await run('git', ['diff'], {
     stdio: 'pipe',
   })
   if (stdout) {
@@ -176,7 +166,7 @@ function updatePackage(pkg) {
   }
   updateDeps(pkgJson, 'dependencies')
   updateDeps(pkgJson, 'devDependencies')
-  fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2) + '\n')
+  fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 }
 
 function updateDeps(pkgJson, key) {
@@ -209,7 +199,8 @@ async function pubilshPackage() {
     try {
       await run(
         'yarn',
-        ['publish', '--new-version', version, '--access', 'public'], {
+        ['publish', '--new-version', version, '--access', 'public'],
+        {
           cwd: pkgRoot,
           stdio: 'pipe',
         }
