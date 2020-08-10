@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sku test</title>
+</head>
+
+<body>
+  <style>
+    .full-sku {
+      display: block;
+      width: 100%;
+    }
+
+    .spec-line {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .spec {
+      display: inline-block;
+      width: 100px;
+      border: 1px solid black;
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .disabled {
+      color: gray;
+      border: solid 1px gray;
+    }
+
+    .selected {
+      color: white;
+      background-color: green;
+    }
+  </style>
+  <div id="app"></div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.0.0-rc.5/vue.global.js"></script>
+  <script src="../dist/sku.js"></script>
+  <script>
+    const MockData = [{
+        skuId: '1',
+        spuSpecValues: [{
+            specId: 'a',
+            specName: '颜色',
+            specValueId: '2',
+            specValueRemark: '黑色',
+          },
+          {
+            specId: 'b',
+            specName: '尺寸',
+            specValueId: '3',
+            specValueRemark: 'L',
+          },
+        ],
+      },
+      {
+        skuId: '2',
+        spuSpecValues: [{
+            specId: 'a',
+            specName: '颜色',
+            specValueId: '3',
+            specValueRemark: '蓝色',
+          },
+          {
+            specId: 'b',
+            specName: '尺寸',
+            specValueId: '4',
+            specValueRemark: 'S',
+          },
+        ],
+      },
+    ]
+
+    function useSku(spulist) {
+      const judger = XSku.createSkuSelector(spulist)
+      judger.onSkuCombined((skuId, specsIdJoin) => {
+        console.log(skuId, specsIdJoin)
+      })
+      let skuList = Vue.shallowRef(judger.specGroup.specLines)
+      const tapSpec = spec => {
+        judger.specTap(spec)
+        skuList.value = judger.specGroup.specLines.concat()
+      }
+      return {
+        tapSpec,
+        skuList
+      }
+    }
+
+    const app = {
+      template: `
+        <section class="full-sku">
+          <div 
+            class="spec-line" 
+            v-for="(specLine, row) in skuList"
+            >
+            <span 
+              v-for="spec in skuList[row].specs"
+              :class="['spec', spec.status]"
+              @click="tapSpec(spec)"
+              >
+              {{ spec.specValue + '-' + spec.status }}
+            </span>
+          </div>
+        </section>
+      `,
+      setup() {
+        let {
+          tapSpec,
+          skuList
+        } = useSku(MockData)
+        return {
+          tapSpec,
+          skuList
+        }
+      }
+    }
+
+    Vue.createApp(app).mount('#app')
+  </script>
+</body>
+
+</html>
