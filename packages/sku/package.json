@@ -5,6 +5,9 @@
   "main": "dist/sku.cjs.js",
   "module": "dist/sku.esm.js",
   "types": "dist/sku.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "sku",
     "spu",
