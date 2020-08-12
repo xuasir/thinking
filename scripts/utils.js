@@ -5,9 +5,13 @@ const resolve = (p) => path.resolve(process.cwd(), p)
 
 const targets = (exports.targets = fs.readdirSync('packages').filter((f) => {
   if (!fs.statSync(`packages/${f}`).isDirectory()) return false
-  const pkg = require(resolve(`./packages/${f}/package.json`))
-  if (pkg.private || !pkg.buildOptions) return false
-  return true
+  try {
+    const pkg = require(resolve(`./packages/${f}/package.json`))
+    if (pkg.private || !pkg.buildOptions) return false
+    return true
+  } catch (e) {
+    return false
+  }
 }))
 
 exports.fuzzyMatchTargets = function (fuzzyTargets, isAllMatch) {
