@@ -1,5 +1,5 @@
 {
-  "name": "vue-hooks",
+  "name": "@xuguo/vue-hooks",
   "version": "0.0.0",
   "description": "a vue3 composition API based utills",
   "main": "dist/vueHooks.cjs.js",
@@ -23,6 +23,13 @@
       "esm",
       "cjs",
       "umd"
+    ],
+    "external": [
+      "vue"
     ]
+  },
+  "dependencies": {
+    "@xuguo/sku": "^1.1.0",
+    "vue": "^3.0.0-rc.5"
   }
 }
