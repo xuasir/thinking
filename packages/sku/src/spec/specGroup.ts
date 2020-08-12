@@ -4,6 +4,10 @@ import { currentSpuOps } from './spuOps'
 import { SpecInstanceType } from './spec'
 import { SpecStatus } from '../helper/enum'
 
+export type SpuList<T> = {
+  [key: string]: T[] | any
+}
+
 export class SpecGroup<T, U> {
   private _skuList: T[]
   private _skuSpecsList: U[][] = []
@@ -18,7 +22,7 @@ export class SpecGroup<T, U> {
     return this._skuIdJoinSpecsId
   }
 
-  constructor(spu_list: T) {
+  constructor(spu_list: SpuList<T>) {
     this._skuList = currentSpuOps.getSkuList(spu_list)
     this._setup()
   }

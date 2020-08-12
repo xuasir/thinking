@@ -1,13 +1,17 @@
 import { Judger, JudgerInstanceType } from './control/judger'
-import { SpecGroup } from './spec/specGroup'
+import { SpecGroup, SpuList } from './spec/specGroup'
 import { SpuOps, setSpuOps } from './spec/spuOps'
+import { SpecInstanceType } from '../src/spec/spec'
+import { SpecLineInstanceType } from '../src/spec/specLine'
 
 export function createSkuSelector<T>(
-  spuList: T,
-  _spuOps?: SpuOps
+  spuList: SpuList<T>,
+  _spuOps?: Partial<SpuOps>
 ): JudgerInstanceType {
   _spuOps && setSpuOps(_spuOps)
   const sg = new SpecGroup(spuList)
   const judger = new Judger(sg)
   return judger
 }
+
+export { SpuOps, SpecInstanceType, SpecLineInstanceType }
