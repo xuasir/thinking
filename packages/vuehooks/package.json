@@ -1,0 +1,35 @@
+{
+  "name": "@xuguo/vue-hooks",
+  "version": "0.0.0",
+  "description": "a vue3 composition API based utills",
+  "main": "dist/vueHooks.cjs.js",
+  "module": "dist/vueHooks.esm.js",
+  "types": "dist/vueHooks.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "vue3",
+    "hooks",
+    "composition API"
+  ],
+  "author": "xuguo",
+  "license": "ISC",
+  "buildOptions": {
+    "prod": true,
+    "name": "XVueHooks",
+    "formats": [
+      "esm",
+      "cjs",
+      "umd"
+    ],
+    "external": [
+      "vue"
+    ]
+  },
+  "dependencies": {
+    "@xuguo/sku": "^1.2.0",
+    "vue": "^3.0.0-rc.5"
+  }
+}
