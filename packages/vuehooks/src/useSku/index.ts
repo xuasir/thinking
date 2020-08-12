@@ -1,12 +1,20 @@
-import { shallowRef } from 'vue'
-import { createSkuSelector } from '@xuguo/sku'
+import { shallowRef, Ref } from 'vue'
+import {
+  createSkuSelector,
+  SpecInstanceType,
+  SpecLineInstanceType,
+} from '@xuguo/sku'
 
 type SKU = {
-  specTap(spec: any): void
-  skuList: any
+  specTap(spec: SpecInstanceType): void
+  skuList: Ref<SpecLineInstanceType[]>
 }
 
-export function useSku<T>(spu: T): SKU {
+type SpuList<T> = {
+  [key: string]: T[] | any
+}
+
+export function useSku<T>(spu: SpuList<T>): SKU {
   const judger = createSkuSelector(spu)
   const skuList = shallowRef(judger.specGroup.specLines)
   const specTap = (spec: any) => {
