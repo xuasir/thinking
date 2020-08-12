@@ -15,7 +15,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-explicit-any': 0,
+  },
   overrides: [
     {
       files: ['**/__test__/*-test.ts', '**/__test__/*.spec.ts'],
@@ -30,6 +32,9 @@ module.exports = {
         'prettier/@typescript-eslint',
         'plugin:jest/recommended',
       ],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 0,
+      },
     },
     {
       files: ['./scripts/*', 'rollup.*.js'],
