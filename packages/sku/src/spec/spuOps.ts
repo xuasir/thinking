@@ -39,6 +39,6 @@ export let currentSpuOps: SpuOps = {
   },
 }
 
-export function setSpuOps(ops: SpuOps): void {
+export function setSpuOps(ops: Partial<SpuOps>): void {
   currentSpuOps = extend(currentSpuOps, ops)
 }
