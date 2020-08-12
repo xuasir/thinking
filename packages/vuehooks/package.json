@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@xuguo/sku": "^1.1.0",
+    "@xuguo/sku": "^1.2.0",
     "vue": "^3.0.0-rc.5"
   }
 }
