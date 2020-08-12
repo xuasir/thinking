@@ -1,6 +1,6 @@
 {
   "name": "@xuguo/vue-hooks",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a vue3 composition API based utills",
   "main": "dist/vueHooks.cjs.js",
   "module": "dist/vueHooks.esm.js",
