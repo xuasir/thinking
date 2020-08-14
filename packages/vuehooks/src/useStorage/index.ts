@@ -5,6 +5,16 @@ type BasicType = boolean | string | number
 export function useStorage(
   storage: Storage,
   key: string,
+  defaultValue?: undefined
+): Ref<any>
+export function useStorage(
+  storage: Storage,
+  key: string,
+  defaultValue: null
+): Ref<any>
+export function useStorage(
+  storage: Storage,
+  key: string,
   defaultValue: string
 ): Ref<string>
 export function useStorage(
@@ -17,11 +27,6 @@ export function useStorage(
   key: string,
   defaultValue: boolean
 ): Ref<boolean>
-export function useStorage<T extends null>(
-  storage: Storage,
-  key: string,
-  defaultValue: T
-): Ref<any>
 export function useStorage<T extends Record<string, unknown>>(
   storage: Storage,
   key: string,
@@ -33,8 +38,8 @@ export function useStorage<T extends unknown[]>(
   defaultValue: T
 ): Ref<T>
 export function useStorage<
-  T extends BasicType | Record<string, unknown> | [] | null
->(storage: Storage, key: string, defaultValue?: T): Ref<any> {
+  T extends BasicType | Record<string, unknown> | unknown[] | null
+>(storage: Storage, key: string, defaultValue: T): Ref<any> {
   const storageValue = ref<T>()
 
   function readValue(): T | undefined {
