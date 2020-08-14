@@ -10,4 +10,5 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   watchPathIgnorePatterns: ['node_modules'],
   testMatch: ['<rootDir>/packages/**/__test__/**/*spec.[jt]s?(x)'],
+  setupFiles: ['<rootDir>/scripts/test.setup.js'],
 }
