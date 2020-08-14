@@ -46,4 +46,22 @@ describe('test useStorage', () => {
       )
     })
   })
+
+  test('test undefined', async () => {
+    const sv = useStorage(localStorage, KEY)
+    expect(sv.value).toBeUndefined()
+    sv.value = 1
+    await nextTick()
+    expect(localStorage.setItem).toBeCalled()
+    expect(localStorage.setItem).toBeCalledWith(KEY, JSON.stringify(1))
+  })
+
+  test('test null', async () => {
+    const sv = useStorage(localStorage, KEY, null)
+    expect(sv.value).toBeUndefined()
+    sv.value = [1]
+    await nextTick()
+    expect(localStorage.setItem).toBeCalled()
+    expect(localStorage.setItem).toBeCalledWith(KEY, JSON.stringify([1]))
+  })
 })
