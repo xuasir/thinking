@@ -6,7 +6,9 @@ import {
   ref,
   onMounted,
   onUnmounted,
+  getCurrentInstance,
 } from 'vue'
+import { useThrottleFn } from '../useThrottleFn'
 
 interface Pos {
   x: number
@@ -25,7 +27,7 @@ export function useScroll(dom: Dom = document): any {
   })
   const el = ref<null | HTMLElement>(null)
 
-  let element: null | Target
+  let element: Target
   function updatePosition(target: Target) {
     if (target === document) {
       if (target.scrollingElement) {
@@ -37,20 +39,22 @@ export function useScroll(dom: Dom = document): any {
       position.y = (target as HTMLElement).scrollTop
     }
   }
-  function handler(evt: Event) {
+  const { run: handler } = useThrottleFn((evt: Event) => {
     if (!evt.target) return
     updatePosition(evt.target as Target)
+  }, 500)
+
+  if (getCurrentInstance()) {
+    onMounted(() => {
+      const element = (typeof dom === 'function' ? dom() : dom) || el.value
+      updatePosition(element)
+      element.addEventListener('scroll', handler)
+    })
+
+    onUnmounted(() => {
+      element?.removeEventListener('scroll', handler)
+    })
   }
-
-  onMounted(() => {
-    const element = (typeof dom === 'function' ? dom() : dom) || el.value
-    updatePosition(element)
-    element.addEventListener('scroll', handler)
-  })
-
-  onUnmounted(() => {
-    element?.removeEventListener('scroll', handler)
-  })
 
   return [readonly(position), el]
 }
