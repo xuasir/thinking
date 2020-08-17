@@ -1,5 +1,5 @@
 import { useSku } from '../src'
-import { isRef } from 'vue'
+import { isRef } from 'vue-demi'
 
 describe('test useSku', () => {
   const MockData = [

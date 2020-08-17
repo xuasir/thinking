@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref } from 'vue-demi'
 import { useThrottleRef } from '../src'
 
 type noop = (...args: any[]) => any

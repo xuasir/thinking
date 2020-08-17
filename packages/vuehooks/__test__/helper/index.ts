@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 import { shallowMount } from '@vue/test-utils'
 
 export function renderHooks<V>(setup: () => V): any {
@@ -7,5 +7,5 @@ export function renderHooks<V>(setup: () => V): any {
     setup,
   })
 
-  return shallowMount<V>(App as any)
+  return shallowMount(App as any)
 }

@@ -1,4 +1,4 @@
-import { Ref, onMounted, isRef, onUnmounted, ref } from 'vue'
+import { Ref, onMounted, isRef, onUnmounted, ref } from 'vue-demi'
 
 type TargetType = HTMLElement | Ref<HTMLElement> | (() => HTMLElement) | Window
 type Options = { dom?: TargetType } & Partial<AddEventListenerOptions>

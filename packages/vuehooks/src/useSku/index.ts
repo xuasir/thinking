@@ -1,4 +1,4 @@
-import { shallowRef, Ref } from 'vue'
+import { shallowRef, Ref } from 'vue-demi'
 import {
   createSkuSelector,
   SpecInstanceType,

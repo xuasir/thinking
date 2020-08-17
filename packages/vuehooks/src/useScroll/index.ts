@@ -1,13 +1,12 @@
 import {
-  readonly,
+  shallowReadonly,
   reactive,
-  DeepReadonly,
   Ref,
   ref,
   onMounted,
   onUnmounted,
   getCurrentInstance,
-} from 'vue'
+} from 'vue-demi'
 import { useThrottleFn } from '../useThrottleFn'
 
 interface Pos {
@@ -18,8 +17,8 @@ interface Pos {
 type Target = HTMLElement | Document
 type Dom = Target | (() => Target)
 
-export function useScroll(): [DeepReadonly<Pos>, Ref<null | Target>]
-export function useScroll(dom: Dom): [DeepReadonly<Pos>]
+export function useScroll(): [Readonly<Pos>, Ref<null | Target>]
+export function useScroll(dom: Dom): [Readonly<Pos>]
 export function useScroll(dom: Dom = document): any {
   const position = reactive({
     x: 0,
@@ -56,5 +55,5 @@ export function useScroll(dom: Dom = document): any {
     })
   }
 
-  return [readonly(position), el]
+  return [shallowReadonly(position), el]
 }

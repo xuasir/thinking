@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref } from 'vue-demi'
 import { useDebounceRef } from '../src'
 
 type noop = (...args: any[]) => any

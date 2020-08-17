@@ -5,7 +5,7 @@ import {
   watch,
   getCurrentInstance,
   onUnmounted,
-} from 'vue'
+} from 'vue-demi'
 import { useThrottleFn } from '../useThrottleFn'
 
 export function useThrottleRef<T extends Ref>(rawValue: T, wait?: number): T {

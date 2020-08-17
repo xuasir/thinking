@@ -1,4 +1,4 @@
-import { Ref, ref, watch, getCurrentInstance, onUnmounted } from 'vue'
+import { Ref, ref, watch, getCurrentInstance, onUnmounted } from 'vue-demi'
 
 type BasicType = boolean | string | number
 

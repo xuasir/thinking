@@ -1,4 +1,4 @@
-import { isRef, isReadonly } from 'vue'
+import { isRef } from 'vue-demi'
 import { useHistoryTravel } from '../src'
 
 describe('test history travel', () => {
@@ -6,8 +6,8 @@ describe('test history travel', () => {
     const { current, backLength, forwardLength } = useHistoryTravel(1)
     expect(isRef(current)).toBeTruthy()
     expect(current.value).toBe(1)
-    expect(isReadonly(backLength)).toBeTruthy()
-    expect(isReadonly(forwardLength)).toBeTruthy()
+    // expect(isReadonly(backLength)).toBeTruthy()
+    // expect(isReadonly(forwardLength)).toBeTruthy()
     expect(backLength.value).toBe(0)
     expect(forwardLength.value).toBe(0)
   })

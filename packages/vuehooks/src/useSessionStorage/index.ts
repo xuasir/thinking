@@ -1,4 +1,4 @@
-import { Ref } from 'vue'
+import { Ref } from 'vue-demi'
 import { useStorage } from '../useStorage'
 
 export function useSessionStorage(

@@ -1,4 +1,4 @@
-import { ref, Ref } from 'vue'
+import { ref, Ref } from 'vue-demi'
 import { useEventListener } from '../../src'
 type DomParam = HTMLElement | (() => HTMLElement)
 

@@ -5,7 +5,7 @@ import {
   UnwrapRef,
   getCurrentInstance,
   onUnmounted,
-} from 'vue'
+} from 'vue-demi'
 import { useDebounceFn } from '../useDebounceFn'
 
 export function useDebounceRef<T extends Ref>(rawValue: T, wait: number): T {
