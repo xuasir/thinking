@@ -1,4 +1,4 @@
-import { ref, Ref, shallowReadonly } from 'vue-demi'
+import { ref, Ref, computed, ComputedRef } from 'vue-demi'
 type DropOpt = {
   onDom?: (content: any, evt?: DragEvent) => void
   onText?: (text: string, evt?: ClipboardEvent) => void
@@ -46,7 +46,7 @@ function getProps(callback: CallbackFn, isHovering: Ref<boolean>): DropProps {
 
 export function useDrop(
   options: DropOpt = {}
-): [DropProps, Readonly<Ref<boolean>>] {
+): [DropProps, ComputedRef<boolean>] {
   const isHovering = ref(false)
   const callback: CallbackFn = (dataTransfer, evt) => {
     const uri = dataTransfer?.getData('text/uri-list')
@@ -70,5 +70,5 @@ export function useDrop(
       })
     }
   }
-  return [getProps(callback, isHovering), shallowReadonly(isHovering)]
+  return [getProps(callback, isHovering), computed(() => isHovering.value)]
 }
