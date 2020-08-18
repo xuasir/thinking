@@ -1,13 +1,11 @@
 module.exports = {
-  define: {
-    __VUE2__: true,
-  },
   title: 'Vue/JavaScript-utils',
   description: 'JavaScript utils, hooks based Vue3 composition API',
   plugins: ['@vuepress/back-to-top'],
   dest: 'dist',
   base: process.env.DOCS_BASE || '/fruit/',
   // head: [],
+  nav: [{ text: 'vue-hooks', link: '/vue-hooks/' }],
   themeConfig: {
     repo: 'xuguo-code/fruit',
     docsRepo: 'xuguo-code/fruit',

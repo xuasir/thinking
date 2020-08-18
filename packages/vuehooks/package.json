@@ -28,7 +28,8 @@
       "vue",
       "@vue/test-utils",
       "vue-loader",
-      "vue-template-compiler"
+      "vue-template-compiler",
+      "@vue/compiler-dom"
     ]
   },
   "dependencies": {
@@ -37,7 +38,6 @@
   "devDependencies": {
     "@vue/compiler-dom": "^3.0.0-rc.5",
     "@vue/test-utils": "^1.0.3",
-    "vue": "^2.6.11",
     "vue-demi": "^0.2.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11"
