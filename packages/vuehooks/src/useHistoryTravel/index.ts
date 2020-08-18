@@ -5,7 +5,8 @@ import {
   UnwrapRef,
   getCurrentInstance,
   onUnmounted,
-  shallowReadonly,
+  computed,
+  ComputedRef,
 } from 'vue-demi'
 
 type OptionalUnwrapRef<T> = UnwrapRef<T> | undefined
@@ -15,8 +16,8 @@ type ReturnValue<T> = {
   go(step: number): void
   forward(): void
   back(): void
-  forwardLength: Readonly<Ref<number>>
-  backLength: Readonly<Ref<number>>
+  forwardLength: ComputedRef<number>
+  backLength: ComputedRef<number>
 }
 
 type TravelState<T> = {
@@ -53,8 +54,6 @@ export function useHistoryTravel<T>(initialValue?: T): ReturnValue<T> {
   const current = ref<T | undefined>(initialValue)
   const _backLength = ref<number>(0)
   const _forwardLength = ref<number>(0)
-  // const backLength = readonly(computed(() => _backLength.value))
-  // const forwardLength = readonly(computed(() => _forwardLength.value))
   let updateFrom: UpdateStateFrom = UpdateStateFrom.USER
   const travelState: TravelState<OptionalUnwrapRef<T>> = {
     past: [],
@@ -129,7 +128,7 @@ export function useHistoryTravel<T>(initialValue?: T): ReturnValue<T> {
     go,
     forward: () => go(1),
     back: () => go(-1),
-    backLength: shallowReadonly(_backLength),
-    forwardLength: shallowReadonly(_forwardLength),
+    backLength: computed(() => _backLength.value),
+    forwardLength: computed(() => _forwardLength.value),
   }
 }
