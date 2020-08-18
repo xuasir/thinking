@@ -72,6 +72,7 @@
     "semver": "^7.3.2",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7",
-    "vuepress": "^1.0.0-rc.1"
+    "vue": "^2.6.11",
+    "vuepress": "^1.5.3"
   }
 }
