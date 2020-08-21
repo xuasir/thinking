@@ -26,12 +26,13 @@ class Matrix<T> {
   transpose(): T[][] {
     const colNum = this.getRawMatrixColNum()
     const rowNum = this.getRawMatrixRowNum()
-    const transposeMatrix: T[][] = Array.from({ length: rowNum }).map(() =>
-      Array.from({ length: colNum })
+    const transposeMatrix: T[][] = Array.from({ length: colNum }).map(() =>
+      Array.from({ length: rowNum })
     )
+
     for (let c = 0; c < colNum; c++) {
       for (let r = 0; r < rowNum; r++) {
-        transposeMatrix[r][c] = this._m[c][r]
+        transposeMatrix[c][r] = this._m[r][c]
       }
     }
 
