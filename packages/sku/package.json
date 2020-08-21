@@ -1,6 +1,6 @@
 {
   "name": "@xuguo/sku",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "a sku helper",
   "main": "dist/sku.cjs.js",
   "module": "dist/sku.esm.js",
@@ -25,6 +25,6 @@
     ]
   },
   "dependencies": {
-    "@xuguo/toolbox": "^1.0.2"
+    "@xuguo/toolbox": "^1.2.0"
   }
 }
