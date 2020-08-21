@@ -3,6 +3,7 @@ import { SpecGroup, SpuList } from './spec/specGroup'
 import { SpuOps, setSpuOps } from './spec/spuOps'
 import { SpecInstanceType } from '../src/spec/spec'
 import { SpecLineInstanceType } from '../src/spec/specLine'
+import { SpecStatus } from './helper/enum'
 
 export function createSkuSelector<T>(
   spuList: SpuList<T>,
@@ -14,4 +15,4 @@ export function createSkuSelector<T>(
   return judger
 }
 
-export { SpuOps, SpecInstanceType, SpecLineInstanceType }
+export { SpuOps, SpecInstanceType, SpecLineInstanceType, SpecStatus }
