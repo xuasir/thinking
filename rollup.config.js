@@ -84,8 +84,8 @@ function createConfig(format, output, plugins = []) {
   })
 
   const external = [
-    // ...Object.keys(buildOptions.dependencies || {}),
-    // ...Object.keys(buildOptions.peerDependencies || {}),
+    ...Object.keys(buildOptions.dependencies || {}),
+    ...Object.keys(buildOptions.peerDependencies || {}),
     ...(buildOptions?.external || []),
   ]
 

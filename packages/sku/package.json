@@ -24,6 +24,9 @@
       "umd"
     ]
   },
+  "peerDependencies": {
+    "@xuguo/toolbox": "^1.2.0"
+  },
   "dependencies": {
     "@xuguo/toolbox": "^1.2.0"
   }

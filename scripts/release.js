@@ -175,8 +175,8 @@ function updateDeps(pkgJson, key) {
   Object.keys(deps).forEach((dep) => {
     let version = null
     if (
-      dep.startsWith('@fruit') &&
-      (version = pkgNameToNextVersionMap[dep.replace(/@fruit\//, '')])
+      dep.startsWith('@xuguo') &&
+      (version = pkgNameToNextVersionMap[dep.replace(/@xuguo\//, '')])
     ) {
       console.log(
         chalk.green(`${pkgJson.name} --> ${key} --> ${dep}@${version}`)
@@ -206,7 +206,7 @@ async function pubilshPackage() {
         }
       )
       console.log(
-        chalk.green(`Successfully published ${'@fruit/' + pkgName}@${version}`)
+        chalk.green(`Successfully published ${'@xuguo/' + pkgName}@${version}`)
       )
     } catch (e) {
       console.log()
@@ -218,7 +218,7 @@ async function pubilshPackage() {
 function generateTag() {
   return Object.keys(pkgNameToNextVersionMap)
     .map((pkg) => {
-      return `@fruit/${pkg}-v${pkgNameToNextVersionMap[pkg]}`
+      return `@xuguo/${pkg}-v${pkgNameToNextVersionMap[pkg]}`
     })
     .join('|')
 }
