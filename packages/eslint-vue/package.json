@@ -7,6 +7,9 @@
     "vue",
     "eslint"
   ],
+  "files": [
+    "index.js"
+  ],
   "author": "xuguo",
   "license": "ISC",
   "buildOptions": {

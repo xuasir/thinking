@@ -1,15 +1,9 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true
-  },
   extends: ['plugin:vue/essential', 'eslint:recommended'],
   parserOptions: {
     parser: 'babel-eslint'
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 1 : 0,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 1 : 0,
     // 模板代码强制规则
     // 强制 html > 开辟新行
     'vue/html-closing-bracket-newline': [
