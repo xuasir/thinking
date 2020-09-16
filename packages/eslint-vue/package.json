@@ -1,0 +1,20 @@
+{
+  "name": "@xuguo/eslint-vue",
+  "version": "0.1.0",
+  "description": "vue eslint config",
+  "main": "index.js",
+  "keywords": [
+    "vue",
+    "eslint"
+  ],
+  "author": "xuguo",
+  "license": "ISC",
+  "buildOptions": {
+    "format": false
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-vue": "^6.2.2"
+  }
+}
