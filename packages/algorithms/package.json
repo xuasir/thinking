@@ -7,6 +7,8 @@
   "author": "",
   "license": "ISC",
   "buildOptions": {
+    "prod": true,
+    "name": "XAlgorithm",
     "format": [
       "esm",
       "cjs",
