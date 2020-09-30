@@ -1,21 +1,14 @@
 import { CompareFn, Compare } from './helper/types'
-
-const defaultCompareNumber: CompareFn<number> = (l, r) => {
-  if (l > r) return Compare.LARGE
-  else if (l === r) return Compare.EAUAL
-  else return Compare.SMALL
-}
+import { defaultCompareNumber } from './helper/utils'
 
 export function binarySearch<T extends number>(
   source: T[],
   target: T,
   compare?: CompareFn<T>
 ): number
-export function binarySearch<T extends string | Record<string, unknown>>(
-  source: T[],
-  target: T,
-  compare: CompareFn<T>
-): number
+export function binarySearch<
+  T extends string | number | Record<string, unknown>
+>(source: T[], target: T, compare: CompareFn<T>): number
 export function binarySearch(
   source: number[],
   target: number,
