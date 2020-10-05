@@ -28,4 +28,16 @@ describe('test max heap ', () => {
     expect(h.size()).toBe(3)
     expect(h.print()).toBe('4-3-2')
   })
+
+  test('test max heap ', () => {
+    const h = new Heap<number>([1, 2, 3, 4, 5, 6, 7])
+    expect(h.size()).toBe(7)
+    expect(h.print()).toBe('7-5-6-4-2-1-3')
+    let prev = Infinity
+    while (h.size()) {
+      const max = h.extractMax()
+      expect(max).toBeLessThan(prev)
+      prev = max
+    }
+  })
 })
