@@ -1,10 +1,15 @@
 {
   "name": "@xuguo/algorithms",
   "version": "1.0.0",
-  "description": "",
+  "description": "some sort algorithms",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "sort",
+    "BST",
+    "quick sort",
+    "merge sort"
+  ],
+  "author": "xuguo",
   "license": "ISC",
   "buildOptions": {
     "prod": true,

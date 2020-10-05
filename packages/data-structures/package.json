@@ -1,12 +1,16 @@
 {
   "name": "@xuguo/data-structures",
   "version": "1.0.0",
-  "description": "",
+  "description": "some data-structures",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "max heap"
+  ],
+  "author": "xuguo",
   "license": "ISC",
   "buildOptions": {
+    "prod": true,
+    "name": "XStructures",
     "format": [
       "esm",
       "cjs",
