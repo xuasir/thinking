@@ -1,4 +1,10 @@
-import { insertSort, selectionSort, mergeSort, quickSort } from '../src'
+import {
+  insertSort,
+  selectionSort,
+  mergeSort,
+  quickSort,
+  heapSort
+} from '../src'
 import { getRandomArray } from './helper'
 
 describe('test sort ', () => {
@@ -35,6 +41,14 @@ describe('test sort ', () => {
 
   test('test quick sort number ', () => {
     const target = quickSort(source)
+
+    for (let i = 1; i < size; i++) {
+      expect(target[i]).toBeGreaterThanOrEqual(target[i - 1])
+    }
+  })
+
+  test('test heap sort number ', () => {
+    const target = heapSort(source)
 
     for (let i = 1; i < size; i++) {
       expect(target[i]).toBeGreaterThanOrEqual(target[i - 1])
