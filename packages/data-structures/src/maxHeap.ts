@@ -1,7 +1,7 @@
 import { defaultCompareNumber } from './helper/utils'
 import { Compare, CompareFn } from './helper/types'
 
-export class Heap<T extends number | string | Record<string, any>> {
+export class MaxHeap<T extends number | string | Record<string, any>> {
   private data: T[]
   private _compare: CompareFn<T> | CompareFn<number>
   private count = 0
@@ -33,7 +33,7 @@ export class Heap<T extends number | string | Record<string, any>> {
       const parent = ((index - 1) / 2) | 0
       const compare = this._compare(
         this.data[parent] as T & number,
-        this.data[index] as T & number
+        v as T & number
       )
       if (compare === Compare.LARGE || compare === Compare.EAUAL) break
       else {

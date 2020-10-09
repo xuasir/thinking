@@ -1,8 +1,8 @@
-import { Heap } from '../src'
+import { MaxHeap } from '../src'
 
-describe('test max heap ', () => {
+describe('test max max heap ', () => {
   test('test add item ', () => {
-    const h = new Heap<number>()
+    const h = new MaxHeap<number>()
 
     expect(h.size()).toBe(0)
     h.add(2)
@@ -14,7 +14,7 @@ describe('test max heap ', () => {
   })
 
   test('test extract max ', () => {
-    const h = new Heap<number>()
+    const h = new MaxHeap<number>()
     ;[2, 3, 4].forEach(v => h.add(v))
     expect(h.size()).toBe(3)
     expect(h.print()).toBe('4-2-3')
@@ -24,13 +24,13 @@ describe('test max heap ', () => {
   })
 
   test('test heapify ', () => {
-    const h = new Heap<number>([2, 3, 4])
+    const h = new MaxHeap<number>([2, 3, 4])
     expect(h.size()).toBe(3)
     expect(h.print()).toBe('4-3-2')
   })
 
-  test('test max heap ', () => {
-    const h = new Heap<number>([1, 2, 3, 4, 5, 6, 7])
+  test('test max Maxheap ', () => {
+    const h = new MaxHeap<number>([1, 2, 3, 4, 5, 6, 7])
     expect(h.size()).toBe(7)
     expect(h.print()).toBe('7-5-6-4-2-1-3')
     let prev = Infinity
