@@ -29,7 +29,7 @@ export class MaxHeap<T extends number | string | Record<string, any>> {
 
   private shiftUp(index: number) {
     const v = this.data[index]
-    while (index > -1) {
+    while (index > 0) {
       const parent = ((index - 1) / 2) | 0
       const compare = this._compare(
         this.data[parent] as T & number,

@@ -39,5 +39,20 @@ describe('test max max heap ', () => {
       expect(max).toBeLessThan(prev)
       prev = max
     }
+    expect(h.size()).toBe(0)
+  })
+
+  test('test max in big data', () => {
+    const size = 1000
+    const arr = Array.from({ length: size }).map((_, i) => i)
+    const h = new MaxHeap<number>(arr)
+    expect(h.size()).toBe(size)
+    let prev = Infinity
+    while (h.size()) {
+      const max = h.extractMax()
+      expect(max).toBeLessThan(prev)
+      prev = max
+    }
+    expect(h.size()).toBe(0)
   })
 })
