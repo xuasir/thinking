@@ -8,8 +8,8 @@ export class IndexMaxHeap<T extends number | string | Record<string, any>> {
   private _compare: CompareFn<T> | CompareFn<number>
   private count = 0
 
-  constructor(compare?: CompareFn<T>)
-  constructor(source?: T[], compare?: CompareFn<T>)
+  constructor(source?: number[])
+  constructor(source: T[], compare: CompareFn<T>)
   constructor(source?: T[] | CompareFn<T>, compare?: CompareFn<T>) {
     if (typeof source === 'undefined') {
       this.data = []
