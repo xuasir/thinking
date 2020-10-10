@@ -49,13 +49,13 @@ export class MaxHeap<T extends number | string | Record<string, any>> {
     while (2 * index + 1 < this.count) {
       let l = 2 * index + 1
       if (l + 1 < this.count) {
-        const compare = this._compare!(
+        const compare = this._compare(
           this.data[l] as T & number,
           this.data[l + 1] as T & number
         )
         compare === Compare.SMALL ? l++ : ''
       }
-      const compare2 = this._compare!(
+      const compare2 = this._compare(
         v as T & number,
         this.data[l] as T & number
       )

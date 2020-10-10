@@ -63,13 +63,13 @@ export class IndexMaxHeap<T extends number | string | Record<string, any>> {
     while (2 * i + 1 < this.count) {
       let l = 2 * i + 1
       if (l + 1 < this.count) {
-        const compare = this._compare!(
+        const compare = this._compare(
           this.data[this.index[l]] as T & number,
           this.data[this.index[l + 1]] as T & number
         )
         compare === Compare.SMALL ? l++ : ''
       }
-      const compare2 = this._compare!(
+      const compare2 = this._compare(
         v as T & number,
         this.data[this.index[l]] as T & number
       )
