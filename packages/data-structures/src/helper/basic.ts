@@ -13,3 +13,12 @@ export class TreeNode<T> {
     this.right = right
   }
 }
+
+export class LinkNode<T> {
+  e: T
+  next: null | LinkNode<T>
+  constructor(value: T, next: null | LinkNode<T> = null) {
+    this.e = value
+    this.next = next
+  }
+}
