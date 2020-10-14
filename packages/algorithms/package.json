@@ -1,6 +1,6 @@
 {
   "name": "@xuguo/algorithms",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "some sort algorithms",
   "main": "index.js",
   "keywords": [
