@@ -1,11 +1,8 @@
 import { CompareFn, Compare } from './helper/types'
 import { defaultCompareNumber } from './helper/utils'
 
-export function selectionSort<T extends number>(
-  source: T[],
-  compare?: CompareFn<T>
-): T[]
-export function selectionSort<T extends string | number | Record<string, any>>(
+export function selectionSort(source: number[]): number[]
+export function selectionSort<T extends string | Record<string, any>>(
   source: T[],
   compare: CompareFn<T>
 ): T[]

@@ -1,14 +1,11 @@
 import { CompareFn, Compare } from './helper/types'
 import { defaultCompareNumber } from './helper/utils'
 
-export function bubbleSort(
-  source: number[],
-  compare?: CompareFn<number>
-): number[]
-export function bubbleSort<T extends string | number | Record<string, any>>(
-  source: number[],
-  compare?: CompareFn<number>
-): number[]
+export function bubbleSort(source: number[]): number[]
+export function bubbleSort<T extends string | Record<string, any>>(
+  source: T[],
+  compare: CompareFn<T>
+): T[]
 export function bubbleSort(
   source: number[],
   compare = defaultCompareNumber

@@ -1,14 +1,12 @@
 import { CompareFn, Compare } from './helper/types'
 import { defaultCompareNumber } from './helper/utils'
 
-export function binarySearch<T extends number>(
+export function binarySearch(source: number[], target: number): number
+export function binarySearch<T extends string | Record<string, unknown>>(
   source: T[],
   target: T,
-  compare?: CompareFn<T>
+  compare: CompareFn<T>
 ): number
-export function binarySearch<
-  T extends string | number | Record<string, unknown>
->(source: T[], target: T, compare: CompareFn<T>): number
 export function binarySearch(
   source: number[],
   target: number,

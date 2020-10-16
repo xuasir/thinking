@@ -1,14 +1,11 @@
 import { CompareFn, Compare } from './helper/types'
 import { defaultCompareNumber } from './helper/utils'
 
-export function insertSort(
-  source: number[],
-  compare?: CompareFn<number>
-): number[]
-export function insertSort<T extends string | number | Record<string, any>>(
-  source: number[],
-  compare?: CompareFn<number>
-): number[]
+export function insertSort(source: number[]): number[]
+export function insertSort<T extends string | Record<string, any>>(
+  source: T[],
+  compare: CompareFn<T>
+): T[]
 export function insertSort(
   source: number[],
   compare = defaultCompareNumber
