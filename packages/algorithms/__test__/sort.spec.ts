@@ -10,7 +10,7 @@ import { getRandomArray } from './helper'
 
 describe('test sort ', () => {
   let source: number[] = []
-  const size = 100000,
+  const size = 10000,
     range = 10000
   beforeEach(() => {
     source = getRandomArray(size, range)
