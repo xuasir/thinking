@@ -9,7 +9,7 @@
     "cm": "git-cz",
     "test": "jest",
     "build": "node scripts/build.js",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
     "release": "node scripts/release.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
