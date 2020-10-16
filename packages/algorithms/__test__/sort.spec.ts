@@ -3,14 +3,15 @@ import {
   selectionSort,
   mergeSort,
   quickSort,
-  heapSort
+  heapSort,
+  bubbleSort
 } from '../src'
 import { getRandomArray } from './helper'
 
 describe('test sort ', () => {
   let source: number[] = []
-  const size = 10000,
-    range = 1000
+  const size = 100000,
+    range = 10000
   beforeEach(() => {
     source = getRandomArray(size, range)
   })
@@ -49,6 +50,14 @@ describe('test sort ', () => {
 
   test('test heap sort number ', () => {
     const target = heapSort(source)
+
+    for (let i = 1; i < size; i++) {
+      expect(target[i]).toBeGreaterThanOrEqual(target[i - 1])
+    }
+  })
+
+  test('test bubble sort number ', () => {
+    const target = bubbleSort(source)
 
     for (let i = 1; i < size; i++) {
       expect(target[i]).toBeGreaterThanOrEqual(target[i - 1])
