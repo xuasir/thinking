@@ -22,3 +22,12 @@ export class LinkNode<T> {
     this.next = next
   }
 }
+
+export class TrieNode {
+  isWord: boolean
+  next: Map<string, TrieNode>
+  constructor(isWord = false) {
+    this.isWord = isWord
+    this.next = new Map()
+  }
+}
