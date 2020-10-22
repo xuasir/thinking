@@ -1,4 +1,4 @@
-import { checker, marks, makeGrid } from '../src'
+import { checker, marks, remakeGrid } from '../src'
 import { generate, grid } from '../src/grid'
 
 describe('test checker', () => {
@@ -8,10 +8,11 @@ describe('test checker', () => {
   })
 
   test('error marks', () => {
-    makeGrid()
+    const qGrid = remakeGrid()
+    expect(checker(qGrid)).toBeFalsy()
     for (let row = 0; row < 9; row++) {
       for (let col = 0; col < 9; col++) {
-        if (grid[row][col] < 1) expect(marks[row][col]).toBeFalsy()
+        if (qGrid[row][col] < 1) expect(marks[row][col]).toBeFalsy()
         else expect(marks[row][col]).toBeTruthy()
       }
     }
