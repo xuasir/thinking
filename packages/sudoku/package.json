@@ -1,0 +1,25 @@
+{
+  "name": "@xuguo/sudoku",
+  "version": "0.0.0",
+  "description": "a sudoku helper",
+  "main": "dist/sudoku.cjs.js",
+  "module": "dist/sudoku.esm.js",
+  "types": "dist/sudoku.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "sudoku"
+  ],
+  "author": "xuguo",
+  "license": "ISC",
+  "buildOptions": {
+    "prod": true,
+    "name": "XSudoku",
+    "formats": [
+      "esm",
+      "cjs",
+      "umd"
+    ]
+  }
+}
