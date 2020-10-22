@@ -1,6 +1,6 @@
 {
   "name": "@xuguo/sudoku",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a sudoku helper",
   "main": "dist/sudoku.cjs.js",
   "module": "dist/sudoku.esm.js",
