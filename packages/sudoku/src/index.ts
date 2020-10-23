@@ -1,2 +1,2 @@
 export { makeGrid, remakeGrid } from './grid'
-export { checker, marks } from './checker'
+export { checker, marks, resetMarks } from './checker'

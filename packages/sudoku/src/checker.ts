@@ -4,6 +4,10 @@ export const marks: boolean[][] = Array.from({ length: 9 }).map(
   () => Array.from({ length: 9 }).fill(true) as boolean[]
 )
 
+export function resetMarks(): void {
+  marks.forEach(row => row.map(() => true))
+}
+
 function checkRow(matrix: number[][]) {
   for (let row = 0; row < 9; row++) markRow(matrix, row)
 }

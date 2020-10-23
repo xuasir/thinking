@@ -1,4 +1,5 @@
 import { makeMatrix, makeRow, shffule, fillNumAble } from './utils/matrix'
+import { resetMarks } from './checker'
 
 export let grid: number[][] = []
 let _level = 5
@@ -53,6 +54,7 @@ export function makeGrid(level = 5): number[][] {
 }
 
 export function remakeGrid(): number[][] {
+  resetMarks()
   return grid.map(cells =>
     cells.map(cell => (Math.random() * 9 < _level ? 0 : cell))
   )
