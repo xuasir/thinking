@@ -5,7 +5,7 @@ export const marks: boolean[][] = Array.from({ length: 9 }).map(
 )
 
 export function resetMarks(): void {
-  marks.forEach(row => row.map(() => true))
+  marks.forEach((row, i) => (marks[i] = row.map(() => true)))
 }
 
 function checkRow(matrix: number[][]) {
