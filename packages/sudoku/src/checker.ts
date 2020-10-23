@@ -16,7 +16,6 @@ function markRow(matrix: number[][], rowIndex: number) {
   const rows = matrix[rowIndex],
     marksRow = marks[rowIndex]
   for (let i = 0; i < 8; i++) {
-    if (!marksRow[i]) continue
     for (let j = i + 1; j < 9; j++)
       if (rows[i] === rows[j]) marksRow[i] = marksRow[j] = false
   }
@@ -28,7 +27,6 @@ function checkCol(matrix: number[][]) {
 
 function markCol(matrix: number[][], colIndex: number) {
   for (let i = 0; i < 8; i++) {
-    if (!marks[i][colIndex]) continue
     for (let j = i + 1; j < 9; j++)
       if (matrix[i][colIndex] === matrix[j][colIndex])
         marks[i][colIndex] = marks[j][colIndex] = false
@@ -45,7 +43,6 @@ function markBox(matrix: number[][], boxIndex: number) {
   )
   for (let i = 0; i < 8; i++) {
     const { rowIndex, colIndex } = IndexMap[i]
-    if (!marks[rowIndex][colIndex]) continue
     for (let j = i + 1; j < 9; j++) {
       const { rowIndex: rowIndex2, colIndex: colIndex2 } = IndexMap[j]
       if (matrix[rowIndex][colIndex] === matrix[rowIndex2][colIndex2]) {
@@ -56,6 +53,7 @@ function markBox(matrix: number[][], boxIndex: number) {
 }
 
 export function checker(matrix: number[][]): boolean {
+  resetMarks()
   checkRow(matrix)
   checkCol(matrix)
   checkBox(matrix)
