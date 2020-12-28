@@ -1,5 +1,5 @@
 {
-  "name": "@xuguo/algorithms",
+  "name": "@vcake/algorithms",
   "version": "0.2.0",
   "description": "some sort algorithms",
   "main": "index.js",

@@ -206,7 +206,7 @@ async function pubilshPackage() {
         }
       )
       console.log(
-        chalk.green(`Successfully published ${'@xuguo/' + pkgName}@${version}`)
+        chalk.green(`Successfully published ${'@vcake/' + pkgName}@${version}`)
       )
     } catch (e) {
       console.log()
@@ -218,7 +218,7 @@ async function pubilshPackage() {
 function generateTag() {
   return Object.keys(pkgNameToNextVersionMap)
     .map((pkg) => {
-      return `@xuguo/${pkg}-v${pkgNameToNextVersionMap[pkg]}`
+      return `@vcake/${pkg}-v${pkgNameToNextVersionMap[pkg]}`
     })
     .join('|')
 }

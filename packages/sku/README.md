@@ -29,7 +29,7 @@ spu: {
 本库仅对数据结构有如上要求，可通过`spuOps`来定义如何获取相应数据
 > 1. 初始化
 ```js
-import { createSkuSelector } from '@xuguo/sku'
+import { createSkuSelector } from '@vcake/sku'
 let judger = createSkuSelector(spulist, spuOps)
 ```
 

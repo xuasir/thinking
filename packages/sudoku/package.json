@@ -1,5 +1,5 @@
 {
-  "name": "@xuguo/sudoku",
+  "name": "@vcake/sudoku",
   "version": "1.1.1",
   "description": "a sudoku helper",
   "main": "dist/sudoku.cjs.js",

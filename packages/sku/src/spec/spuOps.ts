@@ -1,4 +1,4 @@
-import { extend } from '@xuguo/toolbox'
+import { extend } from '@vcake/toolbox'
 
 export interface SpuOps {
   skuCodeJoiner: string

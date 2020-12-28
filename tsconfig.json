@@ -18,7 +18,7 @@
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
-      "@xuguo/*": ["packages/*/src"]
+      "@vcake/*": ["packages/*/src"]
     },
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true

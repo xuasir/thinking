@@ -1,5 +1,5 @@
 {
-  "name": "@xuguo/data-structures",
+  "name": "@vcake/data-structures",
   "version": "0.2.0",
   "description": "some data-structures",
   "main": "index.js",

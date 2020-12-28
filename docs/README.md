@@ -23,29 +23,29 @@ meta:
 ---
 
 ### Packages和使用
-1. `@xuguo/sku`实现sku算法  
+1. `@vcake/sku`实现sku算法  
 ```JavaScript
 // 安装依赖
-npm install @xuguo/sku
+npm install @vcake/sku
 
 // 使用
-import { createSkuSelector } from '@xuguo/sku'
+import { createSkuSelector } from '@vcake/sku'
 ```
 
-2. `@xuguo/toolbox`实现JavaScript工具函数  
+2. `@vcake/toolbox`实现JavaScript工具函数  
 ```JavaScript
 // 安装依赖
-npm install @xuguo/toolbox
+npm install @vcake/toolbox
 
 // 使用
-import { isNumber } from '@xuguo/sku'
+import { isNumber } from '@vcake/sku'
 ```
 
-3. `@xuguo/vue-hooks`实现基于`Vue3 composition API`的hooks函数集  
+3. `@vcake/vue-hooks`实现基于`Vue3 composition API`的hooks函数集  
 ```JavaScript
 // 安装依赖
-npm install @xuguo/vue-hooks
+npm install @vcake/vue-hooks
 
 // 使用
-import { useScroll } from '@xuguo/sku'
+import { useScroll } from '@vcake/sku'
 ```

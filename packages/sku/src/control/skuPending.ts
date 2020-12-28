@@ -1,4 +1,4 @@
-import { isUndefinedOrNull } from '@xuguo/toolbox'
+import { isUndefinedOrNull } from '@vcake/toolbox'
 import { SpecInstanceType } from '../spec/spec'
 import { currentSpuOps } from '../spec/spuOps'
 

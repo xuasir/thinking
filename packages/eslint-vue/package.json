@@ -1,5 +1,5 @@
 {
-  "name": "@xuguo/eslint-vue",
+  "name": "@vcake/eslint-vue",
   "version": "0.1.2",
   "description": "vue eslint config",
   "main": "index.js",
