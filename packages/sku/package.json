@@ -1,6 +1,6 @@
 {
   "name": "@vcake/sku",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "a sku helper",
   "main": "dist/sku.cjs.js",
   "module": "dist/sku.esm.js",
