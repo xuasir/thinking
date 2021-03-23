@@ -1,10 +1,10 @@
 {
-  "name": "@vcake/sku",
-  "version": "1.1.6",
+  "name": "@xus/sku",
+  "version": "1.0.0",
   "description": "a sku helper",
-  "main": "dist/sku.cjs.js",
-  "module": "dist/sku.esm.js",
-  "types": "dist/sku.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -13,21 +13,12 @@
     "spu",
     "combine"
   ],
-  "author": "xuguo",
-  "license": "ISC",
-  "buildOptions": {
-    "prod": true,
-    "name": "XSku",
-    "formats": [
-      "esm",
-      "cjs",
-      "umd"
-    ]
-  },
+  "author": "a-sir",
+  "license": "MIt",
   "peerDependencies": {
-    "@vcake/toolbox": "^1.2.0"
+    "@xus/toolbox": "^1.2.0"
   },
   "dependencies": {
-    "@vcake/toolbox": "^1.2.0"
+    "@xus/toolbox": "^1.2.0"
   }
 }

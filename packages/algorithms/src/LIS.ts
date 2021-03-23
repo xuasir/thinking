@@ -87,5 +87,5 @@ export function itemOfLIS(
 ): number[] {
   const len = source.length
   if (len < 1) return []
-  return indexOfLIS(source, compare).map(i => source[i])
+  return indexOfLIS(source, compare).map((i) => source[i])
 }

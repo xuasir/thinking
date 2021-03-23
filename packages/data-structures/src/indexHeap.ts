@@ -114,7 +114,7 @@ export class IndexMaxHeap<T extends number | string | Record<string, any>> {
   print(): string {
     return this.index
       .slice(0, this.count)
-      .map(v => this.data[v])
+      .map((v) => this.data[v])
       .join('-')
   }
 }

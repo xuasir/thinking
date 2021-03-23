@@ -25,7 +25,7 @@ export function fillNumAble(
   colIndex: number
 ): boolean {
   const rows = matrix[rowIndex]
-  const cols = matrix.map(row => row[colIndex])
+  const cols = matrix.map((row) => row[colIndex])
   const { boxIndex } = converToBoxIndex(rowIndex, colIndex)
   const cells = getBoxCells(matrix, boxIndex)
   for (let i = 0; i < 9; i++) {

@@ -1,26 +1,17 @@
 {
-  "include": [
-    "packages/*/src",
-    "packages/*/__test__"
-  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "lib": ["ESNext"],
     "strict": true,
-    "sourceMap": true,
-    "removeComments": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "checkJs": false,
-    "allowJs": false,
-    "rootDir": "./",
     "baseUrl": "./",
     "paths": {
-      "@vcake/*": ["packages/*/src"]
+      "@xus/*": ["packages/*/src"]
     },
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true
   }
 }

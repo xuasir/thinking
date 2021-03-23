@@ -1,23 +1,19 @@
 {
-  "name": "@vcake/algorithms",
+  "name": "@xus/algorithms",
   "version": "0.2.0",
-  "description": "some sort algorithms",
-  "main": "index.js",
+  "description": "some algorithms",
+  "main": "index.cjs.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "sort",
     "BST",
     "quick sort",
     "merge sort"
   ],
-  "author": "xuguo",
-  "license": "ISC",
-  "buildOptions": {
-    "prod": true,
-    "name": "XAlgorithm",
-    "format": [
-      "esm",
-      "cjs",
-      "umd"
-    ]
-  }
+  "author": "a-sir",
+  "license": "MIT"
 }

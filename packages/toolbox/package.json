@@ -1,29 +1,19 @@
 {
-  "name": "@vcake/toolbox",
-  "version": "1.2.1",
+  "name": "@xus/toolbox",
+  "version": "1.0.0",
   "description": "js utils function",
-  "main": "dist/toolbox.cjs.js",
-  "module": "dist/toolbox.esm.js",
-  "types": "dist/toolbox.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "keywords": [
     "js",
     "utils",
     "functional",
     "math"
   ],
-  "author": "xuguo",
-  "license": "ISC",
-  "buildOptions": {
-    "prod": true,
-    "name": "XToolbox",
-    "formats": [
-      "esm",
-      "cjs",
-      "umd"
-    ]
-  }
+  "author": "a-sir",
+  "license": "MIT"
 }

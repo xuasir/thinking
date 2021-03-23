@@ -57,5 +57,5 @@ export function checker(matrix: number[][]): boolean {
   checkRow(matrix)
   checkCol(matrix)
   checkBox(matrix)
-  return marks.every(cells => cells.every(cell => cell))
+  return marks.every((cells) => cells.every((cell) => cell))
 }

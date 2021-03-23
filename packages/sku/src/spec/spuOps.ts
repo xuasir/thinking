@@ -36,7 +36,7 @@ export let currentSpuOps: SpuOps = {
   },
   getspecValue(spec) {
     return spec.specValueRemark
-  },
+  }
 }
 
 export function setSpuOps(ops: Partial<SpuOps>): void {

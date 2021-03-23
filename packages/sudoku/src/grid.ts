@@ -48,14 +48,14 @@ function generateOrder(): number[] {
 export function makeGrid(level = 5): number[][] {
   _level = level
   generate()
-  return grid.map(cells =>
-    cells.map(cell => (Math.random() * 9 < _level ? 0 : cell))
+  return grid.map((cells) =>
+    cells.map((cell) => (Math.random() * 9 < _level ? 0 : cell))
   )
 }
 
 export function remakeGrid(): number[][] {
   resetMarks()
-  return grid.map(cells =>
-    cells.map(cell => (Math.random() * 9 < _level ? 0 : cell))
+  return grid.map((cells) =>
+    cells.map((cell) => (Math.random() * 9 < _level ? 0 : cell))
   )
 }

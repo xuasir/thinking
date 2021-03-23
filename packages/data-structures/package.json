@@ -1,20 +1,16 @@
 {
-  "name": "@vcake/data-structures",
+  "name": "@xus/data-structures",
   "version": "0.2.0",
   "description": "some data-structures",
-  "main": "index.js",
+  "main": "index.cjs.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "max heap"
   ],
-  "author": "xuguo",
-  "license": "ISC",
-  "buildOptions": {
-    "prod": true,
-    "name": "XStructures",
-    "format": [
-      "esm",
-      "cjs",
-      "umd"
-    ]
-  }
+  "author": "a-sir",
+  "license": "MIT"
 }
