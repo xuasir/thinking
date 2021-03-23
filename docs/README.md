@@ -22,8 +22,10 @@ meta:
     content: JavaScript utils, hooks based Vue3 composition API
 ---
 
-### Packages和使用
-1. `@vcake/sku`实现sku算法  
+### Packages 和使用
+
+1. `@vcake/sku`实现 sku 算法
+
 ```JavaScript
 // 安装依赖
 npm install @vcake/sku
@@ -32,16 +34,18 @@ npm install @vcake/sku
 import { createSkuSelector } from '@vcake/sku'
 ```
 
-2. `@vcake/toolbox`实现JavaScript工具函数  
+2. `@xus/toolbox`实现 JavaScript 工具函数
+
 ```JavaScript
 // 安装依赖
-npm install @vcake/toolbox
+npm install @xus/toolbox
 
 // 使用
 import { isNumber } from '@vcake/sku'
 ```
 
-3. `@vcake/vue-hooks`实现基于`Vue3 composition API`的hooks函数集  
+3. `@vcake/vue-hooks`实现基于`Vue3 composition API`的 hooks 函数集
+
 ```JavaScript
 // 安装依赖
 npm install @vcake/vue-hooks

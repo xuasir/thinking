@@ -15,7 +15,7 @@ export function createSkuSelector<T>(
   return judger
 }
 
-export {
+export type {
   SpuOps,
   SpecInstanceType,
   SpecLineInstanceType,

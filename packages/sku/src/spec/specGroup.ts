@@ -1,5 +1,5 @@
 import { SpecLine, SpecLineInstanceType } from './specLine'
-import { Matrix } from '@vcake/toolbox'
+import { Matrix } from '@xus/toolbox'
 import { currentSpuOps } from './spuOps'
 import { SpecInstanceType } from './spec'
 import { SpecStatus } from '../helper/enum'

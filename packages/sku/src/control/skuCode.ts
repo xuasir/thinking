@@ -1,5 +1,5 @@
 import { currentSpuOps } from './../spec/spuOps'
-import { combination } from '@vcake/toolbox'
+import { combination } from '@xus/toolbox'
 
 export class SkuCode {
   code: string

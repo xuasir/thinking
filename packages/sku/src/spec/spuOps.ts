@@ -1,4 +1,4 @@
-import { extend } from '@vcake/toolbox'
+import { extend } from '@xus/toolbox'
 
 export interface SpuOps {
   skuCodeJoiner: string

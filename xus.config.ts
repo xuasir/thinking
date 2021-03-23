@@ -8,7 +8,7 @@ export default defineConfig({
     sourcemap: false,
     alwaysEmptyDistDir: true,
     lerna: {
-      excludePkgs: ['leetcode']
+      pkgsOrder: ['toolbox']
     }
   },
   lint: {

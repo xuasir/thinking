@@ -8,10 +8,6 @@
     "declaration": true,
     "lib": ["ESNext"],
     "strict": true,
-    "baseUrl": "./",
-    "paths": {
-      "@xus/*": ["packages/*/src"]
-    },
     "skipLibCheck": true
   }
 }
