@@ -3067,15 +3067,26 @@
     esbuild "^0.9.2"
     webpack-chain "^6.5.1"
 
-"@xus/cli@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@xus/cli/-/cli-0.4.0.tgz#c4dbe774d526a2619068cc1a7121b7deb54dab50"
-  integrity sha512-8B8VpeQyGmXRHqB/3w0QeCp0GjYHOq7ljgyedNKaycQg1Y0XsK6vrifwvQWi1Cp7hkZXcrLSu7mE4ZP6su5OVg==
+"@xus/cli-types@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@xus/cli-types/-/cli-types-0.4.1.tgz#cdb5336443240cf7c03ee6ddfcffa9786e23d36a"
+  integrity sha512-Id+029QXnNo1rp8qlN6ZIjvJ4BuqBOyr1GGFdVaiWnIg3GjxzPqpogA62VOC9alc4WM8GmpVNUNxean/oTHcWg==
   dependencies:
     "@xus/cli-shared" "^0.4.0"
-    "@xus/cli-types" "^0.4.0"
     "@xus/core" "^0.4.0"
-    "@xus/preset-built-in" "^0.4.0"
+    "@xus/rollup-chain" "^0.3.1"
+    esbuild "^0.9.2"
+    webpack-chain "^6.5.1"
+
+"@xus/cli@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@xus/cli/-/cli-0.4.1.tgz#74ce2e0b50696c17391bb5dbb8f90684aa3074cf"
+  integrity sha512-7atJ6agdKm1KG9iiyLZeb8TNpwMzNDRRKwTcKOZ410ViA94Mk+erxHwXklY2vGySac5JBQwJomz3BwEuox8y4g==
+  dependencies:
+    "@xus/cli-shared" "^0.4.0"
+    "@xus/cli-types" "^0.4.1"
+    "@xus/core" "^0.4.0"
+    "@xus/preset-built-in" "^0.4.1"
 
 "@xus/core@^0.4.0":
   version "0.4.0"
@@ -3142,19 +3153,21 @@
     terser "^5.6.0"
     url "^0.11.0"
 
-"@xus/preset-built-in@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@xus/preset-built-in/-/preset-built-in-0.4.0.tgz#74833a8592b0abbfb46909c8a426fc1b6112ce1c"
-  integrity sha512-pr/uHdPFS+yIvaiuBPYnfBwhkoFzjgkcoAOFgmq4UQMYsP3XJdEVyw32UDpKdSO9HA5bvw1IiYK8ocyXJJ9WbA==
+"@xus/preset-built-in@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@xus/preset-built-in/-/preset-built-in-0.4.1.tgz#44878e2ce53ce38c54b5b14c78e918b20553c4b2"
+  integrity sha512-3pvMtzuel3WSMaeiXNAd9sPN2iUKZre06fWMxwMP+AOZZVaYnJdOPLts2wB6aQTg8VaD1jKoUC/kS7dnB5xxIg==
   dependencies:
     "@xus/cli-shared" "^0.4.0"
-    "@xus/cli-types" "^0.4.0"
+    "@xus/cli-types" "^0.4.1"
     "@xus/core" "^0.4.0"
     "@xus/plugin-cmd-roll-lib" "^0.4.0"
     "@xus/rollup-chain" "^0.3.1"
+    add-stream "^1.0.0"
     conventional-changelog "^3.1.24"
     release-it "^14.4.1"
     rollup "^2.41.1"
+    tempfile "^3.0.0"
     webpack-chain "^6.5.1"
 
 "@xus/rollup-chain@^0.3.1":
@@ -11724,6 +11737,11 @@ temp-dir@^1.0.0:
   resolved "https://registry.npm.taobao.org/temp-dir/download/temp-dir-1.0.0.tgz#0a7c0ea26d3a39afa7e0ebea9c1fc0bc4daa011d"
   integrity sha1-CnwOom06Oa+n4OvqnB/AvE2qAR0=
 
+temp-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-2.0.0.tgz#bde92b05bdfeb1516e804c9c00ad45177f31321e"
+  integrity sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==
+
 temp-write@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npm.taobao.org/temp-write/download/temp-write-3.4.0.tgz#8cff630fb7e9da05f047c74ce4ce4d685457d492"
@@ -11735,6 +11753,14 @@ temp-write@^3.4.0:
     pify "^3.0.0"
     temp-dir "^1.0.0"
     uuid "^3.0.1"
+
+tempfile@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tempfile/-/tempfile-3.0.0.tgz#5376a3492de7c54150d0cc0612c3f00e2cdaf76c"
+  integrity sha512-uNFCg478XovRi85iD42egu+eSFUmmka750Jy7L5tfHI5hQKKtbPnxaSaXAbBqCDYrw3wx4tXjKwci4/QmsZJxw==
+  dependencies:
+    temp-dir "^2.0.0"
+    uuid "^3.3.2"
 
 terminal-link@^2.0.0:
   version "2.1.1"

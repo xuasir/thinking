@@ -3,21 +3,21 @@ import { isEqual } from '../../src'
 describe('test isEqual ', () => {
   const o1 = {
     a: 2,
-    b: '1',
+    b: '1'
   }
   const o2 = {
     a: 2,
-    b: '1',
+    b: '1'
   }
 
   const o3 = {
     a: o1,
-    b: [1, 2, 3],
+    b: [1, 2, 3]
   }
 
   const o4 = {
     a: o2,
-    b: [1, 2, 3],
+    b: [1, 2, 3]
   }
 
   test('basic type', () => {

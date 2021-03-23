@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.8",
-    "@xus/cli": "^0.4.0",
+    "@xus/cli": "^0.4.1",
     "@xus/eslint-config": "^0.1.4",
     "husky": "^4.2.5",
     "jest": "^26.2.2",

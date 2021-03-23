@@ -19,7 +19,7 @@ describe('test sepcGroup ', () => {
       'a-12#b-102',
       'a-12',
       'b-103',
-      'a-12#b-103',
+      'a-12#b-103'
     ])
     judger.specGroup.specLines.forEach((specLine) => {
       specLine.specs.forEach((spec) => {

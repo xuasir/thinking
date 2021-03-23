@@ -7,15 +7,15 @@ export const MockData = {
           specId: 'a',
           specName: '颜色',
           specValueId: '11',
-          specValueRemark: '黑色',
+          specValueRemark: '黑色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '101',
-          specValueRemark: 'L',
-        },
-      ],
+          specValueRemark: 'L'
+        }
+      ]
     },
     {
       skuId: '2',
@@ -24,15 +24,15 @@ export const MockData = {
           specId: 'a',
           specName: '颜色',
           specValueId: '12',
-          specValueRemark: '绿色',
+          specValueRemark: '绿色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '102',
-          specValueRemark: 'S',
-        },
-      ],
+          specValueRemark: 'S'
+        }
+      ]
     },
     {
       skuId: '2',
@@ -41,24 +41,26 @@ export const MockData = {
           specId: 'a',
           specName: '颜色',
           specValueId: '12',
-          specValueRemark: '绿色',
+          specValueRemark: '绿色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '103',
-          specValueRemark: 'XS',
-        },
-      ],
-    },
-  ],
+          specValueRemark: 'XS'
+        }
+      ]
+    }
+  ]
 }
 
 export const spuOpt = {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getSkuList(spu: any): any {
     return spu.skuList
   },
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getSkuSpecList(sku: any): any {
     return sku.specs
-  },
+  }
 }

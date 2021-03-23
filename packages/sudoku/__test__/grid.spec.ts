@@ -5,8 +5,8 @@ describe('test grid', () => {
   test('generate grid and fill able', () => {
     generate()
     expect(grid.length).toBe(9)
-    const sortGrid = grid.map(row => row.sort((a, b) => a - b))
-    sortGrid.forEach(row => {
+    const sortGrid = grid.map((row) => row.sort((a, b) => a - b))
+    sortGrid.forEach((row) => {
       expect(row).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9])
     })
     for (let row = 0; row < 9; row++) {

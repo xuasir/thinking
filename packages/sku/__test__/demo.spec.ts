@@ -11,15 +11,15 @@ describe('test sepcGroup ', () => {
           specId: 'a',
           specName: '颜色',
           specValueId: '11',
-          specValueRemark: '黑色',
+          specValueRemark: '黑色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '101',
-          specValueRemark: 'L',
-        },
-      ],
+          specValueRemark: 'L'
+        }
+      ]
     },
     {
       skuId: '2',
@@ -28,15 +28,15 @@ describe('test sepcGroup ', () => {
           specId: 'a',
           specName: '颜色',
           specValueId: '12',
-          specValueRemark: '绿色',
+          specValueRemark: '绿色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '102',
-          specValueRemark: 'S',
-        },
-      ],
+          specValueRemark: 'S'
+        }
+      ]
     },
     {
       skuId: '2',
@@ -45,16 +45,16 @@ describe('test sepcGroup ', () => {
           specId: 'a',
           specName: '颜色',
           specValueId: '12',
-          specValueRemark: '绿色',
+          specValueRemark: '绿色'
         },
         {
           specId: 'b',
           specName: '尺寸',
           specValueId: '103',
-          specValueRemark: 'XS',
-        },
-      ],
-    },
+          specValueRemark: 'XS'
+        }
+      ]
+    }
   ]
   let judger: ReturnType<typeof createSkuSelector>
   beforeEach(() => {
@@ -71,7 +71,7 @@ describe('test sepcGroup ', () => {
       'a-12#b-102',
       'a-12',
       'b-103',
-      'a-12#b-103',
+      'a-12#b-103'
     ])
     judger.specGroup.specLines.forEach((specLine) => {
       specLine.specs.forEach((spec) => {

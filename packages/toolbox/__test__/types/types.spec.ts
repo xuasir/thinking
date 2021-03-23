@@ -12,7 +12,7 @@ import {
   isPureObject,
   isArray,
   isDate,
-  isRegExp,
+  isRegExp
 } from '../../src'
 
 describe('test types judge', () => {

@@ -13,7 +13,7 @@ export default defineConfig({
   },
   lint: {
     eslint: {
-      include: 'packages/**/src/**/*',
+      include: ['./packages'],
       ext: ['.ts']
     },
     stylelint: false

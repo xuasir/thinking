@@ -23,7 +23,7 @@ export function withPerformance<T extends (...args: any[]) => any>(
 }
 
 function measurePerf() {
-  const userTimingObserver = new PerformanceObserver(list => {
+  const userTimingObserver = new PerformanceObserver((list) => {
     list
       .getEntries()
       .map(({ name, entryType, startTime, duration }) => {

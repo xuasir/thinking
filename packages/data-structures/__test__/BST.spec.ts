@@ -28,25 +28,25 @@ describe('test BST ', () => {
     t.add(5)
     t.add(10)
     let res: number[] = []
-    t.preorderTraverse(e => res.push(e))
+    t.preorderTraverse((e) => res.push(e))
     expect(res.join('-')).toBe('15-5-10')
     t.add(50)
     t.add(4)
     res = []
-    t.preorderTraverse(e => res.push(e))
+    t.preorderTraverse((e) => res.push(e))
     expect(res.join('-')).toBe('15-5-4-10-50')
   })
 
   test('BST sequence in order and post order traverse ', () => {
     expect(t.size()).toBe(6)
     let res: number[] = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('5->15->19->100->105->150')
     res = []
-    t.postorderTraverse(e => res.push(e))
+    t.postorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('5->19->15->150->105->100')
     res = []
-    t.sequenceTraverse(e => res.push(e))
+    t.sequenceTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('100->15->105->5->19->150')
   })
 
@@ -61,7 +61,7 @@ describe('test BST ', () => {
     expect(t.deleteMaximum()).toBe(150)
     expect(t.size()).toBe(5)
     const res: number[] = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('5->15->19->100->105')
   })
 
@@ -77,33 +77,33 @@ describe('test BST ', () => {
     t.delete(150)
     expect(t.size()).toBe(5)
     let res: number[] = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('5->15->19->100->105')
     t.delete(5)
     expect(t.size()).toBe(4)
     res = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('15->19->100->105')
     t.delete(100)
     expect(t.size()).toBe(3)
     res = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('15->19->105')
 
     t.add(105)
     expect(t.size()).toBe(4)
     res = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('15->19->105')
     t.delete(105)
     expect(t.size()).toBe(3)
     res = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('15->19->105')
     t.delete(105)
     expect(t.size()).toBe(2)
     res = []
-    t.inorderTraverse(e => res.push(e))
+    t.inorderTraverse((e) => res.push(e))
     expect(res.join('->')).toBe('15->19')
   })
 })

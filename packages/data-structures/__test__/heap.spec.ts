@@ -15,7 +15,7 @@ describe('test max max heap ', () => {
 
   test('test extract max ', () => {
     const h = new MaxHeap<number>()
-    ;[2, 3, 4].forEach(v => h.add(v))
+    ;[2, 3, 4].forEach((v) => h.add(v))
     expect(h.size()).toBe(3)
     expect(h.print()).toBe('4-2-3')
     expect(h.extractMax()).toBe(4)

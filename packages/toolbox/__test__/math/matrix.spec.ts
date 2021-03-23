@@ -4,12 +4,12 @@ describe('test math method ', () => {
   const rawMatrix = [
     ['c1', 'c2', 'c3'],
     ['c1', 'c2', 'c3'],
-    ['c1', 'c2', 'c3'],
+    ['c1', 'c2', 'c3']
   ]
   const transposeMatrix = [
     ['c1', 'c1', 'c1'],
     ['c2', 'c2', 'c2'],
-    ['c3', 'c3', 'c3'],
+    ['c3', 'c3', 'c3']
   ]
   test('test matrix ', () => {
     const m = new Matrix(rawMatrix)
@@ -20,11 +20,11 @@ describe('test math method ', () => {
   const rawData = [
     ['c1', 'c2'],
     ['c1', 'c2'],
-    ['c1', 'c2'],
+    ['c1', 'c2']
   ]
   const transposeData = [
     ['c1', 'c1', 'c1'],
-    ['c2', 'c2', 'c2'],
+    ['c2', 'c2', 'c2']
   ]
 
   test('test transpose', () => {
