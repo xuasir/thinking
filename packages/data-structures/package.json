@@ -1,6 +1,6 @@
 {
   "name": "@xus/data-structures",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "some data-structures",
   "main": "index.cjs.js",
   "module": "index.esm.js",
