@@ -6,7 +6,10 @@ export default defineConfig({
     formats: ['esm', 'cjs'],
     minify: false,
     sourcemap: false,
-    alwaysEmptyDistDir: true
+    alwaysEmptyDistDir: true,
+    lerna: {
+      excludePkgs: ['leetcode']
+    }
   },
   lint: {
     eslint: {

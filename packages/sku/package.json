@@ -16,9 +16,9 @@
   "author": "a-sir",
   "license": "MIt",
   "peerDependencies": {
-    "@xus/toolbox": "^1.2.0"
+    "@xus/toolbox": "^1.0.0"
   },
   "dependencies": {
-    "@xus/toolbox": "^1.2.0"
+    "@xus/toolbox": "^1.0.0"
   }
 }
