@@ -19,7 +19,7 @@ describe('test binary search ', () => {
     const compare: CompareFn<typeof source[0]> = (l, r) => {
       if (l?.id > r?.id) return Compare.LARGE
       else if (l?.id < r?.id) return Compare.SMALL
-      else return Compare.EAUAL
+      else return Compare.EQUAL
     }
 
     expect(binarySearch(source, source[0], compare)).toBe(0)

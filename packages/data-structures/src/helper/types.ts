@@ -1,5 +1,5 @@
 export enum Compare {
-  EAUAL = 'equal',
+  EQUAL = 'equal',
   LARGE = 'large',
   SMALL = 'small'
 }

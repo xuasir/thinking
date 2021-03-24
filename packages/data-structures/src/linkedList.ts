@@ -56,7 +56,7 @@ export class LinkedList<T> {
         target as T & number,
         nextNode.e as T & number
       )
-      if (compare === Compare.EAUAL) {
+      if (compare === Compare.EQUAL) {
         flag = true
         prev.next = nextNode.next
         nextNode.next = null
@@ -89,7 +89,7 @@ export class LinkedList<T> {
       node = this.dummyHead.next
     while (node !== null) {
       const compare = this._compare(target as T & number, node.e as T & number)
-      if (compare === Compare.EAUAL) {
+      if (compare === Compare.EQUAL) {
         flag = true
         break
       }

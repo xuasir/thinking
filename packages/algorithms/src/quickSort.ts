@@ -44,7 +44,7 @@ function __partition<T>(
   const flag = source[l]
 
   while (i < rl) {
-    if (compare(source[i], flag) === Compare.EAUAL) i++
+    if (compare(source[i], flag) === Compare.EQUAL) i++
     else if (compare(source[i], flag) === Compare.SMALL) {
       lr++
       ;[source[lr], source[i]] = [source[i], source[lr]]

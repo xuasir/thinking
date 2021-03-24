@@ -18,7 +18,7 @@ export function binarySearch(
   while (l <= r) {
     const mid = (l + (r - l) / 2) | 0
     const compareRes = compare(source[mid], target)
-    if (compareRes === Compare.EAUAL) return mid
+    if (compareRes === Compare.EQUAL) return mid
     if (compareRes === Compare.LARGE) r = mid - 1
     if (compareRes === Compare.SMALL) l = mid + 1
   }

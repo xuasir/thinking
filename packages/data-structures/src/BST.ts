@@ -107,7 +107,7 @@ export class BST<T> {
   private _deleteAny(node: TreeNode<T> | null, target: T): TreeNode<T> | null {
     if (!node) return null
     const compare = this._compare(target as T & number, node.e as T & number)
-    if (compare === Compare.EAUAL) {
+    if (compare === Compare.EQUAL) {
       if (node.left === null) {
         node.count--
         this.sz--
@@ -149,7 +149,7 @@ export class BST<T> {
   private _deepTraverse(node: TreeNode<T> | null, target: T): boolean {
     if (!node) return false
     const compare = this._compare(target as T & number, node.e as T & number)
-    if (compare === Compare.EAUAL) return true
+    if (compare === Compare.EQUAL) return true
     else if (compare === Compare.LARGE) {
       return this._deepTraverse(node.right, target)
     } else {

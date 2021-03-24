@@ -33,7 +33,7 @@ function shiftDown<T>(arr: T[], len: number, i: number, compare: CompareFn<T>) {
       compare1 === Compare.SMALL ? l++ : ''
     }
     const compare2 = compare(v, arr[l])
-    if (compare2 === Compare.LARGE || compare2 === Compare.EAUAL) break
+    if (compare2 === Compare.LARGE || compare2 === Compare.EQUAL) break
 
     arr[i] = arr[l]
     i = l

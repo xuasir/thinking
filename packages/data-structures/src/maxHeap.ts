@@ -35,7 +35,7 @@ export class MaxHeap<T extends number | string | Record<string, any>> {
         this.data[parent] as T & number,
         v as T & number
       )
-      if (compare === Compare.LARGE || compare === Compare.EAUAL) break
+      if (compare === Compare.LARGE || compare === Compare.EQUAL) break
       else {
         this.data[index] = this.data[parent]
         index = parent
@@ -59,7 +59,7 @@ export class MaxHeap<T extends number | string | Record<string, any>> {
         v as T & number,
         this.data[l] as T & number
       )
-      if (compare2 === Compare.LARGE || compare2 === Compare.EAUAL) break
+      if (compare2 === Compare.LARGE || compare2 === Compare.EQUAL) break
 
       this.data[index] = this.data[l]
       index = l
